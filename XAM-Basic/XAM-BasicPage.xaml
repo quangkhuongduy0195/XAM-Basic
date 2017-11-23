@@ -1,33 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XAMBasic" x:Class="XAMBasic.XAM_BasicPage">
-
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XAMBasic"
+    x:Class="XAMBasic.XAM_BasicPage"
+    BackgroundColor="Silver">
     <!-- Khai báo ở đây chỉ sử dụng cho file này không thể dùng chung cho toàn bộ project -->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="mRed">Red</Color>
             <x:Double x:Key="size">30</x:Double>
-            <OnPlatform
-                x:Key="mColor"
+            <OnPlatform x:Key="mColor"
                 x:TypeArguments="Color"
-                Android="Green"
-                iOS="Red"></OnPlatform>
+                Android="Green" iOS="Red">
+            </OnPlatform>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+        Android="0,0,0,0"
+        iOS="0,20,0,0" />
+    </ContentPage.Padding>
 
+    <ScrollView >
+        <StackLayout Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <WebView Source="https://www.youtube.com"
+                Margin="10,0,10,10"
+                HeightRequest="500"
+                HorizontalOptions="FillAndExpand"/>
+
+            <Entry Placeholder="Enter text..."
+                Margin="10,0,10,10"
+                HeightRequest="35"
+                TextChanged="Handle_TextChanged"/>
+
+            <Editor BackgroundColor="Aqua"
+                Margin="10,0,10,10"
+                Text="EditTor"
+                x:Name="edt"/>
+
+            <Picker Margin="10,0,10,10" x:Name="picker"/>
+
+            <DatePicker Margin="10,0,10,10"
+                HeightRequest="35"
+                Format="dd/MM/yyyy"/>
+            <TimePicker Margin="10,0,10,10"
+                HeightRequest="35"
+                Format="HH:mm"/>
+
+            <ProgressBar Margin="10,0,10,10"
+                BackgroundColor="Aqua"
+                Progress="0.5"
+                HeightRequest="25" />
+
+            <StackLayout Orientation="Horizontal"
+                Margin="10,0,10,0"
+                HeightRequest="35"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+                
+                <Label Text="Min: 0"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"/>
+                
+                <Label x:Name='lblValue'
+                    Text="value: 25"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"/>
+                
+                <Label Text="Max: 100"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="End"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"/>
+                
+            </StackLayout>
+
+            <Slider Maximum="100"
+                Minimum="0"
+                Value="25"
+                Margin="10,0,10,0"
+                ValueChanged="Handle_ValueChanged"/> 
+
+
+            <Switch IsToggled="true"
+                Margin="10,0,10,0"/>
+            
+            <Label TextColor="{StaticResource mColor}"
+                Margin="10,0,10,10"
+                x:Name="lblName" Text="Quang Khuong Duy"
+                Font="{StaticResource mFont}"
+                HorizontalOptions="Center" />
+            
+            <Button Text="Click Me!"
+                Margin="10,0,10,10"
+                FontSize="{StaticResource size}"
+                Clicked="BtnClickMe" />
+
+            <Image Margin="10,0,10,10"
+                Aspect="AspectFill"
+                WidthRequest="400"
+                HeightRequest="500"
+                Source="duy.jpg"/>
+        </StackLayout>
+    </ScrollView>
     
-
-    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-        
-        <Label
-            TextColor="{StaticResource mColor}"
-            x:Name="lblName"
-            Text="Quang Khuong Duy"
-            Font="{StaticResource mFont}"
-            HorizontalOptions="Center"/>
-        
-        <Button Text="Click Me!"
-            FontSize="{StaticResource size}"
-            Clicked="BtnClickMe"/>
-    </StackLayout>
-
 </ContentPage>
