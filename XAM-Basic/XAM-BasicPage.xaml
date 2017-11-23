@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XAMBasic" x:Class="XAMBasic.XAM_BasicPage">
 
+    <!-- Khai báo ở đây chỉ sử dụng cho file này không thể dùng chung cho toàn bộ project -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="mRed">Red</Color>
+            <x:Double x:Key="size">30</x:Double>
+            <OnPlatform
+                x:Key="mColor"
+                x:TypeArguments="Color"
+                Android="Green"
+                iOS="Red"></OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
 
     <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
         
         <Label
+            TextColor="{StaticResource mColor}"
             x:Name="lblName"
             Text="Quang Khuong Duy"
+            Font="{StaticResource mFont}"
             HorizontalOptions="Center"/>
         
         <Button Text="Click Me!"
-                Clicked="btnClickMe"/>
+            FontSize="{StaticResource size}"
+            Clicked="BtnClickMe"/>
     </StackLayout>
 
 </ContentPage>
