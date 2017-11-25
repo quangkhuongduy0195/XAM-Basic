@@ -23,7 +23,7 @@ namespace XAMBasic
         {
             //if (i % 2 == 0)
             //{
-            //    lblName.Text = "Email: quangkhuongduy@outlook.com";
+            //    lblName.Text = "Email: quangkhuongduy@outlook.com.vn";
             //    lblName.TextColor = Color.Red;
             //}
             //else 
