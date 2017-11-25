@@ -1,22 +1,14 @@
-﻿<Properties StartupConfiguration="{F72DAAD6-0175-4CDB-89EE-C0B0A3949F82}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XAM-Basic/App.xaml.cs">
+﻿<Properties StartupConfiguration="{F429DAAD-B730-4340-B656-0E96463344ED}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XAM-Basic/XAM-BasicPage.xaml.cs">
     <Files>
-      <File FileName="XAM-Basic/XAM-BasicPage.xaml" Line="37" Column="54" />
-      <File FileName="XAM-Basic/XAM-BasicPage.xaml.cs" Line="10" Column="35" />
-      <File FileName="XAM-Basic/App.xaml" Line="6" Column="35" />
-      <File FileName="XAM-Basic/obj/Debug/XAMBasic.XAM-BasicPage.xaml.g.cs" Line="27" Column="1" />
-      <File FileName="XAM-Basic/App.xaml.cs" Line="16" Column="43" />
+      <File FileName="XAM-Basic/XAM-BasicPage.xaml.cs" Line="26" Column="57" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.ItemProperties.XAM-Basic.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/quangkhuongduy/Documents/xamarin/XAM-Basic/XAM-Basic/XAM-BasicPage.xaml" relfile="XAM-Basic/XAM-BasicPage.xaml" line="24" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.XAM-Basic.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.c315044c279b997965cb58cd9bd3053a38b6cef1">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.XAM-Basic.iOS>
   <MultiItemStartupConfigurations />
 </Properties>
